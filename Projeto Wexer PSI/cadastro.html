@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/style/styleCadastro.css">
+    <link rel="stylesheet" href="assets/style/global.css">
+    
+</head>
+<body>
+    <div id="boxOne">
+
+        <main class="container">
+
+            <div id = "logo">
+                <img src="assets/imagens/cadastro/wexer2.png"/>
+            </div>
+
+            <div id = "texts">
+
+                <div id="textOne">
+                    Seja bem vindo(a)!
+                </div>
+
+                <div id="textTwo">
+                    Preencha os campos para se cadastrar
+                </div>
+
+            </div>    
+
+            <form  id="subscribe" class="card">
+                <section class="field"> 
+                    <label for="name" class = "labelOne">Nome</label><br>
+                    <input type="text" id="name" name="name" class="input" />
+                </section>
+
+                <section class="field">
+                    <label for="email" class = "labelOne">E-mail</label><br>
+                    <input type="email" id="email" name="email" class="input" />
+                </section>
+
+                <button type="submit" class="submit" id="submit-btn">
+                    <div id = "nextOpt"> Prosseguir</div>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+      
+            </form>
+        </main>
+
+           
+    </div>
+
+    <div id="boxTwo">
+
+        <main class="container">
+
+            <div id = "logo">
+                <img src="assets/imagens/cadastro/wexer2.png"/>
+            </div>
+
+            <div id = "texts">
+
+                <div id="textOne">
+                    Seja bem vindo(a)!
+                </div>
+
+                <div id="textTwo">
+                    Escolha uma senha
+                </div>
+
+            </div>    
+
+            <form  id="subscribe" class="card">
+                <section class="field"> 
+                    <label for="password" class = "labelOne">Senha</label><br>
+                    <input type="password" id="password" name="password" class="input" />
+                </section>
+
+                <section class="field">
+                    <label for="password" class = "labelOne">Confirmar senha</label><br>
+                    <input type="password" id="email" name="password" class="input" />
+                </section>
+
+                <div id = "textThree">                    
+                    <span class="asterisk">*</span> Precisa no mínimo 8 digitos.<br>
+                    <span class="asterisk">*</span> Precisa conter um caractere especial */+.<br>              
+                    <span class="asterisk">*</span> Precisa conter uma letra em MAIÚSCULA.<br> 
+                </div>
+
+                <button type="submit" class="submit" id="submit-btn">
+                    <div id = "nextOpt"> Prosseguir</div>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+      
+            </form>
+        </main>
+   
+    </div>
+
+    <div id="galo"></div>
+    
+</body>
+    <script src="assets/scripts/scriptCadastro.js"></script>
+    <script src="https://kit.fontawesome.com/8a66317056.js" crossorigin="anonymous"></script>
+</html>

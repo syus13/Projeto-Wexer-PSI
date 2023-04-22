@@ -1,0 +1,231 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#largeBox {
+    width: 100%;
+    height: 3rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: end;
+
+}
+
+.imageOne {
+    width: 1.3rem; 
+    margin-left: 1.25rem;
+}
+
+.welcome {
+    margin-right: 1.25rem;
+}
+
+.welcome span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #017849;
+    margin-right: .30rem;
+}
+
+.container {
+    padding: 1.25rem 6.25rem;
+}
+
+.patientList {   
+    width: 98%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+#containerBtnInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myPatients{
+font-family: 'Montserrat';
+font-weight: 400;
+font-size: 1.25rem;
+color: #4F4F4F;
+margin-bottom: 1.25rem;
+}
+
+.newPatient {
+    width: 9rem;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #017849;
+    border-radius: 50px;
+    color: #FFFFFF;
+    background: #017849;
+    margin-bottom: 2rem;
+}
+
+#search {
+    width: 6rem;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #017849;
+    border-radius: 0 50px 50px 0;
+    color: #FFFFFF;
+    background: #017849;
+    margin-bottom: 2rem;
+    margin-left: -1.25rem;
+}
+
+#inputFilter {
+    width: 19rem;
+    height: 2rem;
+    margin-bottom: 1.37rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 50px 0 0 50px;
+    padding-left: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #E0E0E0;
+    padding: .5rem;
+    text-align: left;
+}
+
+td {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    color: #4F4F4F;
+}
+
+th {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    color: #2F80ED;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 45%;
+    text-align: left;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 35%;
+    text-align: left;
+}
+
+th,
+td:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+
+#icons {
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+#openModalMedicalRecord {
+    width: 1.9rem;
+    height: 1.6rem;
+    color: #017849;
+    background: #FFFFFF;
+    border: 1px solid #017849;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+.openModalEdit {
+    width: 1.9rem;
+    color: #2F80ED;
+    background: #FFFFFF;
+    border: 1px solid #2F80ED;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+
+.openModalEdit2 {
+    width: 2rem;
+    height: 1.5rem;
+    color: #2F80ED;
+    background: #FFFFFF;
+    border: 1px solid #2F80ED;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: .37rem;
+   margin-left: 1.25rem;
+}
+
+#btnDelete {
+    width: 1.9rem;
+    color: #EB5757;
+    background: #FFFFFF;
+    border: 1px solid #EB5757;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: .37rem;
+}
+
+
+/* Animação modal confirmação */
+svg {
+    display: block;
+    height: 12rem;
+    width: 12rem;
+    color: #00995D;
+  }
+  
+  .circle {
+    stroke-dasharray: 76;
+    stroke-dashoffset: 76;
+    animation: draw 1s forwards;
+  }
+  
+  .tick {
+    stroke-dasharray: 18;
+    stroke-dashoffset: 18;
+    animation: draw 1s forwards 1s;
+  }
+  
+  @keyframes draw { 
+    to { stroke-dashoffset: 0 } 
+  }

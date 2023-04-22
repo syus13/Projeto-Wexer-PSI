@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/stylePacientes.css">
+    <link rel="stylesheet" href="assets/style/global.css">
+    <link rel="stylesheet" href="assets/style/stylePacientesModal.css">
+
+
+</head>
+
+<body>
+    <header id="largeBox">
+
+        <div>
+            <img src="assets/imagens/pacientes/Xwexer.svg" class="imageOne" />
+        </div>
+
+        <div class="welcome">
+            <span id="textHeader">Bem vindo (a), </span>
+            <span id="user"><strong>Biricutico</strong> </span>
+            <img src="assets/imagens/pacientes/icon/Mask.svg" />
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="myPatients">
+            Meus pacientes
+        </div>
+        <div class="patientList">
+            <div id="containerBtnInput">
+                <button onclick ="openModalC()" id="openModalRegister" class="newPatient"><i class="fa-solid fa-circle-plus"></i> Novo
+                    cadastro</button>
+
+                <div>
+                    <input type="text" placeholder="Pesquisar" id="inputFilter">
+                    <button id="search"><i class="fa-solid fa-magnifying-glass"></i> Filtrar</button>
+                </div>
+
+            </div>
+            <table id="tablePatient">
+                 <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>01</td>
+                        <td id="openModalData">Fulano</td>
+                        <td>123.123.123-23</td>
+                        <td>
+                            <div id="icons">
+                               <a href="prontuario.html"> <button id="openModalMedicalRecord"><i class="fa-solid fa-clipboard-list"></i>
+                                </button></a>
+                                <button class="openModalEdit" id="openModalEdit"><i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button id="btnDelete"><i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="modalInsert">
+
+        <div id="modal" class="modal">
+
+            <div class="modalContent">
+                <div id="headModal">
+                    <div id="headTextModal">
+                        Novo paciente
+                    </div>
+                    <div class="close">
+                        <i onclick="closeModalC() "class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+                <form>
+
+                    <section class="field">
+                        <label for="cpf">CPF:</label><br>
+                        <input type="text" placeholder="digite" id="cpf" name="cpf" class="inputCpf" />
+                    </section>
+
+                    <section class="field">
+                        <label for="name">Nome:</label><br>
+                        <input type="text" placeholder="digite" id="name" name="name" class="inputName" />
+                    </section>
+
+                    <section class="field">
+                        <label for="date">Data de nascimento:</label><br>
+                        <input type="date" id="date" name="date" class="inputDate" />
+                    </section>
+
+                    <section class="field">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" placeholder="digite" id="email" name="email" class="inputEmail" />
+                    </section>
+
+                    <!-- <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <input type="text" placeholder="digite" id="gender" name="gender" class="inputgender" />
+                    </section> -->
+
+                    <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <select  id="gender" name="gender" >
+                            <option value="" hidden></option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </section>
+
+                    <section class="field">
+                        <label for="nationality">Nacionalidade:</label><br>
+                        <input type="text" placeholder="digite" id="nationality" name="nationalityr"
+                            class="inputnationality" />
+                    </section>
+
+                    <section class="field">
+                        <label for="naturalness
+                        ">Naturalidade:</label><br>
+                        <input type="text" placeholder="digite" id="naturalness" name="naturalness
+                        " class="inputNat" />
+                    </section>
+
+                    <section class="field">
+                        <label for="profession">Profissão:</label><br>
+                        <input type="text" placeholder="digite" id="profession" name="profession" class="inputProf" />
+                    </section>
+
+                    <section class="field">
+                        <label for="scholarity"
+                        >Escolaridade:</label><br>
+                        <input type="text" placeholder="digite" id="scholarity" name="scholarity" class="inputSchol" />
+                    </section>
+
+                    <section class="field">
+                        <label for="maritalStatus">Estado Civil</label><br>
+                        <input type="text" placeholder="digite" id="maritalStatus" name="maritalStatus"
+                            class="inputmaritalStatus" />
+                    </section>
+
+                    <section class="field">
+                        <label for="mom">Mãe:</label><br>
+                        <input type="text" placeholder="digite" id="mom" name="mom" class="inputMom" />
+                    </section>
+
+                    <section class="field">
+                        <label for="dad"
+                        >Pai:</label><br>
+                        <input type="text" placeholder="digite" id="dad"
+                         name="dad"
+                         class="inputDad" />
+                    </section>
+
+                </form>
+                <div>
+                    <div id="boxFooter">
+                        <span id="textFooter">
+                            *Campos obrigatórios
+                        </span>
+                        <div id="createCancel">
+                            <a href="pacientes.html" id="cancel"> Cancelar</a>
+                            <button onclick = "patientCreate()" type="button" id="createPatient">Criar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalEdit">
+
+        <div id="modal" class="modal">
+
+            <div class="modalContent">
+                <div id="headModal">
+                    <div id="headTextModal">
+                        Editar dados do paciente
+                    </div>
+                    <div class="closeE">
+                        <i onclick="closeModalE()" class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+                <form id="editModal">
+
+                    <input type="text" id="idE" name="idE" style = "display: none;" />
+
+                    <section class="field">
+                        <label for="cpf">CPF:</label><br>
+                        <input type="text" placeholder="digite" id="cpfE" name="cpf" class="inputCpf" />
+                    </section>
+
+                    <section class="field">
+                        <label for="name">Nome:</label><br>
+                        <input type="text" placeholder="digite" id="nameE" name="name" class="inputName" />
+                    </section>
+
+                    <section class="field">
+                        <label for="date">Data de nascimento:</label><br>
+                        <input type="date" id="dateE" name="date" class="inputDate" />
+                    </section>
+
+                    <section class="field">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" placeholder="digite" id="emailE" name="email" class="inputEmail" />
+                    </section>
+
+                    <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <input type="text" placeholder="digite" id="genderE" name="gender" class="inputgender" />
+                    </section>
+
+                    <!--  Menu Suspenso para escolha do sexo
+                    <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <div class="dropGender">
+                            <input type="text" id="gender" name="gender" class="inputgender" />
+                            <div class="selectGender">
+                               <div data-gender="male"> Masculino</div>
+                               <div data-gender="female"> Feminino</div>
+                               <div data-gender="notDefined"> Indefinido</div>   
+                            </div>
+                        </div> -->
+                    </section>
+
+                    <section class="field">
+                        <label for="nationality">Nacionalidade:</label><br>
+                        <input type="text" placeholder="digite" id="nationalityE" name="nationality" class="inputnationality" />
+                    </section>
+
+                    <section class="field">
+                        <label for="naturalness
+                        ">Naturalidade:</label><br>
+                        <input type="text" placeholder="digite" id="naturalnessE" name="naturalness" class="inputNat" />
+                    </section>
+
+                    <section class="field">
+                        <label for="profession">Profissão:</label><br>
+                        <input type="text" placeholder="digite" id="professionE" name="profession" class="inputProf" />
+                    </section>
+
+                    <section class="field">
+                        <label for="scholarity
+                        ">Escolaridade:</label><br>
+                        <input type="text" placeholder="digite" id="scholarityE" name="scholarity" 
+                        class="inputSchol" />
+                    </section>
+
+                    <section class="field">
+                        <label for="maritalStatus">Estado Civil</label><br>
+                        <input type="text" placeholder="digite" id="maritalStatusE" name="maritalStatus"
+                            class="inputmaritalStatus" />
+                    </section>
+
+                    <section class="field">
+                        <label for="mom">Mãe:</label><br>
+                        <input type="text" placeholder="digite" id="momE" name="mom" class="inputMom" />
+                    </section>
+
+                    <section class="field">
+                        <label for="dad
+                        ">Pai:</label><br>
+                        <input type="text" placeholder="digite" id="dadE" name="dad" class="inputDad" />
+                    </section>
+
+                </form>
+                <div>
+                    <div id="boxFooter">
+                        <span id="textFooter">
+                            *Campos obrigatórios
+                        </span>
+                        <div id="editCancel">
+                            <a href="pacientes.html" id="cancel"> Cancelar</a>
+                            <button onclick ="requestValueUpdate()" id="editPatient">Salvar alterações</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalPatientData">
+
+        <div id="modalData" class="modalData">
+
+            <div class="modalContent">
+                <div id="headModal">
+                    <div id="headTextModal">
+                        <div> Dados do paciente</div>
+                        <button onclick="openModalE('read')" class="openModalEdit2" id="openModalEdit"><i class="fa-solid fa-pen"></i>
+                        </button>
+                    </div>
+                    <div id="closeD">
+                        <i onclick="closeModalD()" class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+                <form id="dataModal">
+
+                    <input type="text" id="idD" name="idD" style = "display: none;" />
+
+                    <section class="field">
+                        <label for="cpf">CPF:</label><br>
+                        <input type="text" placeholder="digite" id="cpfD" name="cpf" class="inputCpf" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="name">Nome:</label><br>
+                        <input type="text" placeholder="digite" id="nameD" name="name" class="inputName" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="date">Data de nascimento:</label><br>
+                        <input type="date" id="dateD" name="date" class="inputDate" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" placeholder="digite" id="emailD" name="email" class="inputEmail" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <input type="text" placeholder="digite" id="genderD" name="gender" class="inputgender" readonly/>
+                    </section>
+
+                    <!--  Menu Suspenso para escolha do sexo
+                    <section class="field">
+                        <label for="gender">Sexo:</label><br>
+                        <div class="dropGender">
+                            <input type="text" id="gender" name="gender" class="inputgender" />
+                            <div class="selectGender">
+                               <div data-gender="male"> Masculino</div>
+                               <div data-gender="female"> Feminino</div>
+                               <div data-gender="notDefined"> Indefinido</div>   
+                            </div>
+                        </div> -->
+                    </section>
+
+                    <section class="field">
+                        <label for="nationality">Nacionalidade:</label><br>
+                        <input type="text" placeholder="digite" id="nationalityD" name="nationalityr" class="inputnationality" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="naturalness
+                        ">Naturalidade:</label><br>
+                        <input type="text" placeholder="digite" id="naturalnessD" name="naturalness" class="inputNat" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="profession">Profissão:</label><br>
+                        <input type="text" placeholder="digite" id="professionD" name="profession" class="inputProf" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="scholarity
+                        ">Escolaridade:</label><br>
+                        <input type="text" placeholder="digite" id="scholarityD" name="scholarity" class="inputSchol" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="maritalStatus">Estado Civil</label><br>
+                        <input type="text" placeholder="digite" id="maritalStatusD" name="maritalStatus" class="inputmaritalStatus" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="mom">Mãe:</label><br>
+                        <input type="text" placeholder="digite" id="momD" name="mom" class="inputMom" readonly/>
+                    </section>
+
+                    <section class="field">
+                        <label for="dad
+                        ">Pai:</label><br>
+                        <input type="text" placeholder="digite" id="dadD" name="dad" class="inputDad" disabled/>
+                    </section>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalSuccess">
+
+        <div id="modalFinish">
+
+            <div id="formatSuccess">
+
+                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path class="circle"
+                            d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z" />
+                        <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621" />
+                    </g>
+                </svg>
+
+                <div id="insertSuccess">
+                    Paciente cadastrado com sucesso
+                </div>
+
+                <button onclick="closeModalS()"  class="closeSuccess">Ok</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="assets/scripts/scriptPacientes.js"></script>
+<script src="assets/scripts/scriptModalPacientes.js"></script>
+<script src="https://kit.fontawesome.com/8a66317056.js" crossorigin="anonymous"></script>
+
+
+</html>

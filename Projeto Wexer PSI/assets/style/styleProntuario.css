@@ -1,0 +1,157 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#largeBox {
+    width: 100%;
+    height: 3rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: end;
+}
+
+.initLargeBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 138.5%;
+    color: #212121;
+}
+
+.imageOne {
+    width: 1.3rem;
+    margin-left: 20px;
+}
+
+.welcome {
+    margin-right: 20px;
+}
+
+.welcome span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 29px;
+    color: #017849;
+    margin-right: 5px;
+}
+
+.container {
+    padding: 20px 100px;
+}
+
+.patientList {
+    width: 98%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+#containerBtnInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#myPatients {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #4F4F4F;
+}
+
+.newPatient {
+    width: 11rem;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #017849;
+    border-radius: 50px;
+    color: #FFFFFF;
+    background: #017849;
+    margin-bottom: 2rem;
+}
+
+#search {
+    width: 6rem;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #017849;
+    border-radius: 0 50px 50px 0;
+    color: #FFFFFF;
+    background: #017849;
+    margin-bottom: 2rem;
+    margin-left: -20px;
+}
+
+#inputFilter {
+    width: 19rem;
+    height: 2rem;
+    margin-bottom: 1.37rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 50px 0 0 50px;
+    padding-left: 15px;
+}
+
+#bodyPromptuary {
+    width: 100%;
+    margin: 0 4.5rem 0 4.5rem;
+}
+
+#cardIdPatient {
+    width: 21.25rem;
+    height: 21.9rem;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+#idPatient {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.38;
+    color: #212121;
+    margin-bottom: 1.2rem;
+}
+
+.informations {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+.titlePatient{
+    color: #00995D;
+}

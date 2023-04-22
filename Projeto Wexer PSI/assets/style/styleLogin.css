@@ -1,0 +1,83 @@
+#box{
+    display: flex;
+    justify-content: center;
+    margin-top: 8.6563rem;
+    background-image: url("../imagens/login/bgimg.png");
+    background-repeat: no-repeat;   
+   
+}
+
+img{
+    width: 20.06rem;
+    margin-top: 4.8438rem;  
+    margin-bottom: 3rem;  
+}
+
+.container{
+    width: 38rem ;
+    height: 38rem;
+    background: #017849;  
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+section, .field{
+    font-family: "Roboto";
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.input{
+    width: 23.69rem;
+    height: 2.995rem;
+    margin-bottom: 1.37rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+}
+
+.submit{
+    width: 23.6875rem;
+    height: 3rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background: #017849;
+    margin-bottom: 2rem;
+}
+
+a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;          
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.freeRegister{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+

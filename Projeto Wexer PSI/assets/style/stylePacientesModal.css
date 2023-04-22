@@ -1,0 +1,228 @@
+#modalInsert {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalEdit {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalPatientData {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalSuccess {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalFinish {
+    position: absolute;
+    width: 32rem;
+    height: 25rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+#modal {
+    position: absolute;
+    width: 56rem;
+    height: 25rem;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#modalData {
+    position: absolute;
+    width:56rem;
+    height: 22rem;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#headModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#headTextModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #00995D;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+
+}
+
+form input {
+    width: 18rem;
+    height: 2.2rem;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-left: .3rem;
+}
+
+form select {
+    width: 18rem;
+    height: 2.2rem;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-left: .3rem;
+   
+}
+
+
+label {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 0.87rem;
+    line-height: 1rem;
+    color: #4F4F4F;
+}
+
+#boxFooter {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+#textFooter {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-size: .87rem;
+    letter-spacing: 0.2px;
+    color: #616161;
+    margin-top: 1rem;
+}
+
+
+#boxFooter a {
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 0.2px;
+    line-height: 1.2rem;
+    color: #616161;
+    margin-right: 2rem;
+}
+
+#createPatient {
+    width: 8rem;
+    height: 2.2rem;
+    background: #00995D;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+}
+
+#editPatient {
+    width: 12.5rem;
+    height: 2.2rem;
+    background: #00995D;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+}
+
+#formatSuccess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#insertSuccess {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 128%;
+    text-align: center;
+    color: #00995D;
+    margin: 3rem 0 3rem 0;
+}
+
+.closeSuccess{
+    width: 16.5rem;
+    height: 3rem;
+    background: #00995D;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+  }
