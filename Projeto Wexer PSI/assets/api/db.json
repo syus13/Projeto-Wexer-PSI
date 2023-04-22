@@ -3,7 +3,7 @@
     {
       "id": 1,
       "cpf": "3344556688",
-      "name": "GUILHERME BERNARDES DA SILVA",
+      "name": "GUILHERME BERNARDES",
       "date": "",
       "email": "syus13@gmail.com",
       "gender": "Masculino",
@@ -14,6 +14,21 @@
       "maritalStatus": "MG",
       "mom": "",
       "dad": ""
+    },
+    {
+      "id": 2,
+      "cpf": "3344556688",
+      "name": "teste edit",
+      "date": "2023-04-22",
+      "email": "email",
+      "gender": "Outro",
+      "nationality": "Brasileiro",
+      "naturalness": "BH",
+      "profession": "Analista VASP",
+      "scholarity": "Superior completo",
+      "maritalStatus": "casado",
+      "mom": "mãe",
+      "dad": "pai"
     }
   ]
 }
