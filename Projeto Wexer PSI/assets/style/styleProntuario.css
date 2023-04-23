@@ -119,17 +119,17 @@ a {
 }
 
 #bodyPromptuary {
+    display: flex;
     width: 100%;
-    margin: 0 4.5rem 0 4.5rem;
 }
 
 #cardIdPatient {
-    width: 21.25rem;
-    height: 21.9rem;
+    width: 25%;
+    height: 19rem;
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.5rem;
 }
 
@@ -152,6 +152,192 @@ a {
     margin-bottom: 1rem;
 }
 
-.titlePatient{
+.titlePatient {
     color: #00995D;
+}
+
+i {
+    margin-right: .6rem;
+}
+
+#containerRight {
+    width: 70%;
+    padding-left: 2rem;
+}
+
+#boxSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50rem;
+    height: 4rem;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+}
+
+.alignComponents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: .88rem;
+    line-height: 20px;
+    color: #616161;
+}
+
+#lineFilter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    margin-top: 1rem;
+}
+
+#line {
+    width: 73%;
+    height: 1px;
+    background: #BDBDBD;
+    margin-right: .25rem;
+
+}
+
+#textFilter {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+#cardSections {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 200px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-left: 3px solid #00995D;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+#btnSection {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 1px solid #E0E0E0;
+    background-color: #00995D;
+    margin-top: -26px;
+}
+
+#titleSection {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-top: 30px;
+}
+
+#dateSection {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+#textSection {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #424242;
+    text-align:justify;
+}
+
+#showEditDelSelection{
+    font-family: 'Montserrat';
+    color: #424242;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+#cardRelevantFact {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 150px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-left: 3px solid #2F80ED;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    padding: 0 1rem;
+    margin-top: 3rem;
+}
+
+#btnRelevantFact {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 1px solid #E0E0E0;
+    background-color: #2F80ED;
+    margin-top: -26px;
+}
+
+#titleRelevantFact {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-top: 30px;
+}
+
+#dateRelevantFact {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+#textRelevantFact {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #424242;
+    text-align:justify;
+}
+
+#showEditDelRelevantFact{
+    font-family: 'Montserrat';
+    color: #424242;
+    font-weight: bold;
+    margin-top: 15px;
+
 }
