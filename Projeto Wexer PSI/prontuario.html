@@ -111,8 +111,18 @@
                 <div id="lineFilter">
                     <div id="line"></div>
                     <div id="textFilter">
-                       <div> Filtrar por: <strong>Todos</strong> </div>
-                        <p><i class="fa-solid fa-sort-down"></i></p>
+                        <div>
+                            Filtrar por:
+                        </div>
+
+                        <div>                        
+                                <select id="filterOptions" name="filterOptions">
+                                    <option value="all">Todos</option>
+                                    <option value="onlySection">Sessão</option>
+                                    <option value="onlyRelevantFact">Fato Relevante</option>
+                                </select>                           
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -120,16 +130,21 @@
 
                     <div id="imgsection">
                         <button id="btnSection">
-                            <img src="assets/imagens/prontuario/headW.svg"/>
+                            <img src="assets/imagens/prontuario/headW.svg" />
                         </button>
-                        <div id="titleSection">
-                            Sessão 
+                        <div id="titleInfo">
+                            Sessão
                         </div>
-                        <div id="dateSection">
+                        <div id="dateInfo">
                             15 de Abril de 2023
                         </div>
-                        <dix id="textSection">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nisi voluptatibus harum ullam eum, vero dignissimos labore dolorem est iure laudantium doloribus, quos et! Laborum repellendus deserunt inventore doloremque explicabo?Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident recusandae reiciendis harum nisi, obcaecati facilis eius beatae veritatis repudiandae eos quisquam consequatur neque pariatur autem nihil, voluptatibus totam omnis sequi.
+                        <dix id="textInfo">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nisi voluptatibus harum ullam
+                            eum, vero dignissimos labore dolorem est iure laudantium doloribus, quos et! Laborum
+                            repellendus deserunt inventore doloremque explicabo?Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Provident recusandae reiciendis harum nisi, obcaecati facilis eius beatae
+                            veritatis repudiandae eos quisquam consequatur neque pariatur autem nihil, voluptatibus
+                            totam omnis sequi.
                         </dix>
                     </div>
                     <div id="showEditDelSelection">
@@ -142,16 +157,17 @@
 
                     <div id="imgRelevantFact">
                         <button id="btnRelevantFact">
-                            <img src="assets/imagens/prontuario/markW.svg"/>
+                            <img src="assets/imagens/prontuario/markW.svg" />
                         </button>
-                        <div id="titleRelevantFact">
-                            Sessão 
+                        <div id="titleInfo">
+                            Fato relevante
                         </div>
-                        <div id="dateRelevantFact">
+                        <div id="dateInfo">
                             15 de Abril de 2023
                         </div>
-                        <dix id="textRelevantFact">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nisi voluptatibus harum ullam eum, vero dignissimos labore dolorem est iure laudantium doloribus, quos et!.
+                        <dix id="textInfo">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nisi voluptatibus harum ullam
+                            eum, vero dignissimos labore dolorem est iure laudantium doloribus, quos et!.
                         </dix>
                     </div>
                     <div id="showEditDelRelevantFact">

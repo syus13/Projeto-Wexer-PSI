@@ -11,9 +11,10 @@
     
 </head>
 <body>
+
     <div id="boxOne">
 
-        <main class="container">
+        <div class="container1">
 
             <div id = "logo">
                 <img src="assets/imagens/cadastro/wexer2.png"/>
@@ -42,21 +43,21 @@
                     <input type="email" id="email" name="email" class="input" />
                 </section>
 
-                <button type="submit" class="submit" id="submit-btn">
+                <button type="button" class="submit" id="nextform">
                     <div id = "nextOpt"> Prosseguir</div>
                     <i class="fa-solid fa-arrow-right"></i>
 
                 </button>
       
             </form>
-        </main>
+        </div>
 
            
     </div>
 
     <div id="boxTwo">
 
-        <main class="container">
+        <div class="container">
 
             <div id = "logo">
                 <img src="assets/imagens/cadastro/wexer2.png"/>
@@ -81,8 +82,8 @@
                 </section>
 
                 <section class="field">
-                    <label for="password" class = "labelOne">Confirmar senha</label><br>
-                    <input type="password" id="email" name="password" class="input" />
+                    <label for="confirmPassword" class = "labelOne">Confirmar senha</label><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="input" />
                 </section>
 
                 <div id = "textThree">                    
@@ -91,14 +92,14 @@
                     <span class="asterisk">*</span> Precisa conter uma letra em MAIÚSCULA.<br> 
                 </div>
 
-                <button type="submit" class="submit" id="submit-btn">
-                    <div id = "nextOpt"> Prosseguir</div>
+                <button onclick="registerUser()" type="button" class="submit" id="createUser">
+                    <div id = "nextOpt"> Cadastrar</div>
                     <i class="fa-solid fa-arrow-right"></i>
 
                 </button>
       
             </form>
-        </main>
+        </div>
    
     </div>
 

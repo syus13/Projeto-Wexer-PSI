@@ -19,7 +19,7 @@
     width: 11.3619rem;    
 }
 
-.container{
+.container1{
     width: 32.625rem ;
     height: 33.375rem;
     background: #ffffff;  
@@ -103,13 +103,6 @@ margin-left: 0.25rem;
     margin-bottom: 2rem;
     padding-left: 15px;
 }
-
-/* .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
 
 .submit{
     margin-left: 11.875rem;   
