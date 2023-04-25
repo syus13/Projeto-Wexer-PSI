@@ -12,9 +12,9 @@
 </head>
 <body>
 
-    <div id="boxOne">
+    <div id="boxOne" class="visible">
 
-        <div class="container1">
+        <div class="container">
 
             <div id = "logo">
                 <img src="assets/imagens/cadastro/wexer2.png"/>
@@ -43,8 +43,8 @@
                     <input type="email" id="email" name="email" class="input" />
                 </section>
 
-                <button type="button" class="submit" id="nextform">
-                    <div id = "nextOpt"> Prosseguir</div>
+                <button onclick="toggleBoxes()" type="button" class="nextOpt" id="nextOpt1">
+                    <div> Prosseguir</div>
                     <i class="fa-solid fa-arrow-right"></i>
 
                 </button>
@@ -55,7 +55,7 @@
            
     </div>
 
-    <div id="boxTwo">
+    <div id="boxTwo" class="invisible">
 
         <div class="container">
 
@@ -75,7 +75,7 @@
 
             </div>    
 
-            <form  id="subscribe" class="card">
+            <form  id="confirm" class="card">
                 <section class="field"> 
                     <label for="password" class = "labelOne">Senha</label><br>
                     <input type="password" id="password" name="password" class="input" />
@@ -92,8 +92,8 @@
                     <span class="asterisk">*</span> Precisa conter uma letra em MAIÚSCULA.<br> 
                 </div>
 
-                <button onclick="registerUser()" type="button" class="submit" id="createUser">
-                    <div id = "nextOpt"> Cadastrar</div>
+                <button onclick="registerUser()" type="button" class="nextOpt" id="createUser">
+                    <div> Cadastrar</div>
                     <i class="fa-solid fa-arrow-right"></i>
 
                 </button>

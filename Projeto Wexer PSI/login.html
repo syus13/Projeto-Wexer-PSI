@@ -19,7 +19,7 @@
             <form  id="subscribe" class="card">
                 <section class="field"> 
                     <label for="login">Login</label><br>
-                    <input placeholder="usuario@organizacao.com.br" type="text" id="login" name="login" class="input" />
+                    <input placeholder="usuario@organizacao.com.br" type="email" id="email" name="login" class="input" />
                 </section>
 
                 <section class="field">
@@ -27,7 +27,7 @@
                     <input placeholder="Digite sua senha" type="password" id="password" name="password" class="input" />
                 </section>
 
-                <button type="submit" class="submit" id="submit-btn">Entrar</button>
+                <button onclick ="confirmLogin(email, password)" type="submit" class="submit" id="submit-btn">Entrar</button>
                 
                 <div class = "freeRegister">
                     <a href="cadastro.html"> Cadastre-se gratuitamente </a>

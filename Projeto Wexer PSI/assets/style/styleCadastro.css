@@ -6,11 +6,19 @@
 }
 
 #boxTwo{
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 8.6563rem;
     background-image: url("../imagens/login/bgimg.png");
     background-repeat: no-repeat;
+}
+
+.visible{
+  
+}
+
+.invisible{
+    display: none;
 }
 
 
@@ -19,7 +27,7 @@
     width: 11.3619rem;    
 }
 
-.container1{
+.container{
     width: 32.625rem ;
     height: 33.375rem;
     background: #ffffff;  
@@ -50,7 +58,6 @@
 
 #textTwo{
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 1rem;
     line-height: 170%;
@@ -71,7 +78,7 @@
 }
 
 
-section, .field{
+.field{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -104,14 +111,12 @@ margin-left: 0.25rem;
     padding-left: 15px;
 }
 
-.submit{
+.nextOpt{
     margin-left: 11.875rem;   
     padding: 0rem 0.75rem 0rem 1.5rem;
     gap: 13px;
     width: 192px;
     height: 48px;
-    left: 257px;
-    top: 377.68px;   
     background: #00995D;
     color: #FFFFFF;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
@@ -121,7 +126,6 @@ margin-left: 0.25rem;
 
 button, #nextOpt{
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
