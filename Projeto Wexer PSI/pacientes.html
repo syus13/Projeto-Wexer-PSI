@@ -52,21 +52,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td>01</td>
-                        <td id="openModalData">Fulano</td>
-                        <td>123.123.123-23</td>
-                        <td>
-                            <div id="icons">
-                               <a href="prontuario.html"> <button id="openModalMedicalRecord"><i class="fa-solid fa-clipboard-list"></i>
-                                </button></a>
-                                <button class="openModalEdit" id="openModalEdit"><i class="fa-solid fa-pen"></i>
-                                </button>
-                                <button id="btnDelete"><i class="fa-solid fa-trash-can"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr> -->
 
                 </tbody>
             </table>
@@ -109,11 +94,6 @@
                         <input type="email" placeholder="digite" id="email" name="email" class="inputEmail" />
                     </section>
 
-                    <!-- <section class="field">
-                        <label for="gender">Sexo:</label><br>
-                        <input type="text" placeholder="digite" id="gender" name="gender" class="inputgender" />
-                    </section> -->
-
                     <section class="field">
                         <label for="gender">Sexo:</label><br>
                         <select  id="gender" name="gender" >
@@ -126,8 +106,12 @@
 
                     <section class="field">
                         <label for="nationality">Nacionalidade:</label><br>
-                        <input type="text" placeholder="digite" id="nationality" name="nationalityr"
-                            class="inputnationality" />
+                        <select  id="nationality" name="nationality" class="inputnationality">
+                            <option value="" hidden></option>
+                            <option value="Brasileiro">Brasileiro</option>
+                            <option value="Argentino">Argentino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
                     </section>
 
                     <section class="field">
@@ -149,9 +133,14 @@
                     </section>
 
                     <section class="field">
-                        <label for="maritalStatus">Estado Civil</label><br>
-                        <input type="text" placeholder="digite" id="maritalStatus" name="maritalStatus"
-                            class="inputmaritalStatus" />
+                        <label for="maritalStatus">Estado civil:</label><br>
+                        <select  id="maritalStatus" name="maritalStatus" class="inputmaritalStatus">
+                            <option value="" hidden></option>
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Divorciado(a)">Divorciado(a)</option>
+                            <option value="Viúvo(a)">Viúvo(a)</option>
+                        </select>
                     </section>
 
                     <section class="field">
@@ -235,19 +224,6 @@
                             <option value="Feminino">Feminino</option>
                             <option value="Outro">Outro</option>
                         </select>
-                    </section>
-
-                    <!--  Menu Suspenso para escolha do sexo
-                    <section class="field">
-                        <label for="gender">Sexo:</label><br>
-                        <div class="dropGender">
-                            <input type="text" id="gender" name="gender" class="inputgender" />
-                            <div class="selectGender">
-                               <div data-gender="male"> Masculino</div>
-                               <div data-gender="female"> Feminino</div>
-                               <div data-gender="notDefined"> Indefinido</div>   
-                            </div>
-                        </div> -->
                     </section>
 
                     <section class="field">
@@ -334,72 +310,59 @@
 
                     <section class="field">
                         <label for="cpf">CPF:</label><br>
-                        <input type="text" placeholder="digite" id="cpfD" name="cpf" class="inputCpf" readonly/>
+                        <input type="text" placeholder="digite" id="cpfD" name="cpf" class="inputCpf" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="name">Nome:</label><br>
-                        <input type="text" placeholder="digite" id="nameD" name="name" class="inputName" readonly/>
+                        <input type="text" placeholder="digite" id="nameD" name="name" class="inputName" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="date">Data de nascimento:</label><br>
-                        <input type="date" id="dateD" name="date" class="inputDate" readonly/>
+                        <input type="date" id="dateD" name="date" class="inputDate" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="email">E-mail:</label><br>
-                        <input type="email" placeholder="digite" id="emailD" name="email" class="inputEmail" readonly/>
+                        <input type="email" placeholder="digite" id="emailD" name="email" class="inputEmail" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="gender">Sexo:</label><br>
-                        <input type="text" placeholder="digite" id="genderD" name="gender" class="inputgender" readonly/>
-                    </section>
-
-                    <!--  Menu Suspenso para escolha do sexo
-                    <section class="field">
-                        <label for="gender">Sexo:</label><br>
-                        <div class="dropGender">
-                            <input type="text" id="gender" name="gender" class="inputgender" />
-                            <div class="selectGender">
-                               <div data-gender="male"> Masculino</div>
-                               <div data-gender="female"> Feminino</div>
-                               <div data-gender="notDefined"> Indefinido</div>   
-                            </div>
-                        </div> -->
+                        <input type="text" placeholder="digite" id="genderD" name="gender" class="inputgender" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="nationality">Nacionalidade:</label><br>
-                        <input type="text" placeholder="digite" id="nationalityD" name="nationalityr" class="inputnationality" readonly/>
+                        <input type="text" placeholder="digite" id="nationalityD" name="nationalityr" class="inputnationality" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="naturalness
                         ">Naturalidade:</label><br>
-                        <input type="text" placeholder="digite" id="naturalnessD" name="naturalness" class="inputNat" readonly/>
+                        <input type="text" placeholder="digite" id="naturalnessD" name="naturalness" class="inputNat" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="profession">Profissão:</label><br>
-                        <input type="text" placeholder="digite" id="professionD" name="profession" class="inputProf" readonly/>
+                        <input type="text" placeholder="digite" id="professionD" name="profession" class="inputProf" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="scholarity
                         ">Escolaridade:</label><br>
-                        <input type="text" placeholder="digite" id="scholarityD" name="scholarity" class="inputSchol" readonly/>
+                        <input type="text" placeholder="digite" id="scholarityD" name="scholarity" class="inputSchol" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="maritalStatus">Estado Civil</label><br>
-                        <input type="text" placeholder="digite" id="maritalStatusD" name="maritalStatus" class="inputmaritalStatus" readonly/>
+                        <input type="text" placeholder="digite" id="maritalStatusD" name="maritalStatus" class="inputmaritalStatus" disabled/>
                     </section>
 
                     <section class="field">
                         <label for="mom">Mãe:</label><br>
-                        <input type="text" placeholder="digite" id="momD" name="mom" class="inputMom" readonly/>
+                        <input type="text" placeholder="digite" id="momD" name="mom" class="inputMom" disabled/>
                     </section>
 
                     <section class="field">

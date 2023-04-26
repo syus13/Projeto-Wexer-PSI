@@ -72,6 +72,8 @@ async function requestValueUpdate() {
 
     console.log(valueTotal + "teste funcão update")
     await updateApi(valueTotal, editId.value)
+    
+    closeModalE()
 }
 
 // colocar observador no botão

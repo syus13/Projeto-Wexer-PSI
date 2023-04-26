@@ -37,5 +37,7 @@ async function registerUser() {
       alert(`Ocorreu um erro: ${error}`);
     } else {// senão cadastra o usuário normalmente
       alert('Usuário cadastrado com sucesso!');
+      
+      window.location.replace("login.html");
     }
   }

@@ -156,10 +156,10 @@ function patientCreate() {
 function closeModalS() {
   const modalS = document.getElementById("modalSuccess");
 
-  window.setTimeout(() => {
-    modalS.style.display = "none";
+  // window.setTimeout(() => {
+  //   modalS.style.display = "none";
 
-  }, 5000)
+  // }, 1000)
 }
 
 
@@ -171,7 +171,3 @@ function outSideClickS(event) {
 }
 
 document.addEventListener("click", outSideClickS)
-
-
-
-
