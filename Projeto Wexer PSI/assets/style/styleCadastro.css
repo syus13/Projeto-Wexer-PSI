@@ -1,35 +1,31 @@
 #boxOne{
+    width: auto;
+    height: 34.5rem;
     display: flex;
     justify-content: center;
-    margin-top: 8.6563rem;
+    margin-top: 4rem;
+    background-image: url("../imagens/login/bgimg.png");
+    background-repeat: no-repeat;
    
 }
 
 #boxTwo{
+    width: auto;
+    height: 34.5rem;
     display: none;
     justify-content: center;
-    margin-top: 8.6563rem;
+    margin-top: 4rem;
     background-image: url("../imagens/login/bgimg.png");
     background-repeat: no-repeat;
 }
-
-.visible{
-  
-}
-
-.invisible{
-    display: none;
-}
-
-
 
 #logo{
     width: 11.3619rem;    
 }
 
 .container{
-    width: 32.625rem ;
-    height: 33.375rem;
+    width: 30rem ;
+    height: 28rem;
     background: #ffffff;  
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 16px;

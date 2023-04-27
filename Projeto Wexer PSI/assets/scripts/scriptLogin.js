@@ -1,9 +1,11 @@
 async function confirmLogin() {
 const email = document.getElementById("email").value; //obtém o email digitado pelo usuário
 const password = document.getElementById("password").value; //obtém a senha digitada pelo usuário
+const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
 
 //faz uma requisição GET para buscar o usuário no registro
-fetch(`http://localhost:3000/register?email=${email}`)
+// fetch(`http://localhost:3000/register?email=${email}`)
+fetch(api +`/email`)
   .then(response => response.json())
   .then(data => {
     console.log(data)

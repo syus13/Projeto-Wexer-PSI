@@ -1,5 +1,5 @@
 //Função para esconder o card1 e exibir o card2
-function toggleBoxes() {
+function changeBoxes() {
   const boxOne = document.getElementById("boxOne");
   const boxTwo = document.getElementById("boxTwo");
   
@@ -13,13 +13,15 @@ function toggleBoxes() {
   }
 }
 
-// Função para salvar os dados do usuário no db.json
+// Função para pegar os dados digitados e salvar no db.json
 async function registerUser() {
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     const api = 'https://bancodedadosprojeto.onrender.com'
+
+    console.log(api)
     // confirmação de senha.
     if (password !== confirmPassword) {
       alert('As senhas não correspondem.');
