@@ -5,7 +5,7 @@ const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do
 
 //faz uma requisição GET para buscar o usuário no registro
 // fetch(`http://localhost:3000/register?email=${email}`)
-fetch(api +`/email`)
+fetch(api +`register/email`)
   .then(response => response.json())
   .then(data => {
     console.log(data)

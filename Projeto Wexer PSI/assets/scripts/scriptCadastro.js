@@ -34,7 +34,7 @@ async function registerUser() {
       body: JSON.stringify({ name,email, password })
     };
 
-    const response = await fetch(api, requestOptions);
+    const response = await fetch(api + '/register', requestOptions);
 
     if (!response.ok) { // se a senha for ok exibe mensagem de erro
       const error = await response.text();
