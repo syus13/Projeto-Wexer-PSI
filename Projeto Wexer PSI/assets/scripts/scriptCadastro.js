@@ -2,6 +2,7 @@
 function toggleBoxes() {
   const boxOne = document.getElementById("boxOne");
   const boxTwo = document.getElementById("boxTwo");
+  
 
   if (boxOne.style.display === "none") {
     boxOne.style.display = "flex";
@@ -18,6 +19,7 @@ async function registerUser() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
+    const api = 'https://bancodedadosprojeto.onrender.com'
     // confirmação de senha.
     if (password !== confirmPassword) {
       alert('As senhas não correspondem.');
@@ -30,14 +32,14 @@ async function registerUser() {
       body: JSON.stringify({ name,email, password })
     };
 
-    const response = await fetch('http://localhost:3000/register', requestOptions);
+    const response = await fetch(api, requestOptions);
 
     if (!response.ok) { // se a senha for ok exibe mensagem de erro
       const error = await response.text();
       alert(`Ocorreu um erro: ${error}`);
     } else {// senão cadastra o usuário normalmente
-      alert('Usuário cadastrado com sucesso!');
+      // alert('Usuário cadastrado com sucesso!');
       
-      window.location.replace("login.html");
+      window.location.replace("index.html");
     }
   }

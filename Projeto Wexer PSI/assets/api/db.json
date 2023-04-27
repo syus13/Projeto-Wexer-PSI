@@ -29,37 +29,24 @@
       "maritalStatus": "casado",
       "mom": "mãe",
       "dad": "pai"
-    },
-    {
-      "id": 6,
-      "cpf": "3344556688",
-      "name": "GUILHERME BERNARDES",
-      "date": "2023-04-24",
-      "email": "syus1@hotmail.com",
-      "gender": "Masculino",
-      "nationality": "Brasileiro",
-      "naturalness": "Belo Horizonte",
-      "profession": "Analista VASP",
-      "scholarity": "Superior completo",
-      "maritalStatus": "Casado(a)",
-      "mom": "mãe",
-      "dad": "pai"
     }
   ],
   "register": [
     {
-      "name": "GUILHERME BERNARDES",
-      "email": "syus13@gmail.com",
-      "password": "1234",
+      "name": "teste cadastro",
+      "email": "teste@cadastro.com",
+      "password": "12345",
       "id": 1
     },
     {
-      "email": "",
-      "password": "",
+      "name": "GUILHERME BERNARDES",
+      "email": "syus3@gmail.com",
+      "password": "1234",
       "id": 2
     },
     {
-      "email": "syus13@gmail.com",
+      "name": "GUILHERME BERNARDES",
+      "email": "syus1@hotmail.com",
       "password": "1234",
       "id": 3
     }
