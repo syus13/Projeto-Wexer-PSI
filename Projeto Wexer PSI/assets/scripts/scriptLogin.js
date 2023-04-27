@@ -1,4 +1,5 @@
-async function confirmLogin() {
+async function confirmLogin(eventLogin) {
+eventLogin.preventDefault()
 const email = document.getElementById("email").value; //obtém o email digitado pelo usuário
 const password = document.getElementById("password").value; //obtém a senha digitada pelo usuário
 const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
@@ -22,6 +23,7 @@ fetch(api + `/register?email=${email}`)
     //exibe uma mensagem de erro caso ocorra algum problema com a requisição
     alert("Não foi possível validar o login. Tente novamente mais tarde!");
   })
-
   
 };
+const nextPage = document.querySelector("#subscribe")
+nextPage.addEventListener("submit", confirmLogin)
