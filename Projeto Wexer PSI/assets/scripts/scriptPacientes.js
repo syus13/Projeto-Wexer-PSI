@@ -1,5 +1,6 @@
 //Pegar os dados para enviar para API
 const btnSave = document.querySelector("#createPatient")
+
 /* const btnUpdate = document.querySelector("editPatient")
  */
 //referenciar ou id de cada input
@@ -82,7 +83,9 @@ btnSave.addEventListener('click', requestValue)
  
 //Criar função assincrona para gravar os dados na API
 async function insertInApi(firstPosition) {
-    return fetch('http://localhost:3000/patients', {
+    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
+
+    return fetch(api+ '/patients', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -95,7 +98,7 @@ async function insertInApi(firstPosition) {
 //Criar função assincrona para editar os dados na API
 async function updateApi(firstPosition, editId) {
     console.log(editId)
-    return fetch(`http://localhost:3000/patients/${editId}`, {
+    return fetch(api+ `/patients/${editId}`, {
         method: 'PUT',
         headers: {            
             'Content-Type': 'application/json'
@@ -108,7 +111,9 @@ async function updateApi(firstPosition, editId) {
 
 // Função GET
 async function listPatients() {
-    const response = await fetch('http://localhost:3000/patients') // Faz a requisição para o arquivo db.json
+    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
+
+    const response = await fetch(api+ '/patients') // Faz a requisição para o arquivo db.json
     const data = await response.json() // Transforma a resposta em um objeto json
     return data; // Retorna os dados obtidos
 }

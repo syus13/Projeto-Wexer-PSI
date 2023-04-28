@@ -24,6 +24,7 @@ document.addEventListener("click", outSideClickC)
 //Modal editar paciente utilizado pelo botão da tabela e da consultande paciente
 
 async function openModalE(id) {
+  const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
   //recebendo id que vem do onclick
   // O parametro vindo atraves do botão de consulta paciente é "read".
   const modalE = document.getElementById("modalEdit");
@@ -67,7 +68,7 @@ async function openModalE(id) {
   } else {
     // se vier do botão de edição da tabela realiza a requisição na API com getById .
 
-    const response = await fetch(`http://localhost:3000/patients/${id}`) // Faz a requisição para o arquivo db.json
+    const response = await fetch(api+`/patients/${id}`) // Faz a requisição para o arquivo db.json
     const data = await response.json() // Transforma a resposta em um objeto json
 
     document.getElementById("idE").value = id
@@ -106,10 +107,12 @@ document.addEventListener("click", outSideClickE)
 
 //Modal exibir dados paciente
 async function openModalData(id) {
+    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
+
   const modalD = document.getElementById("modalPatientData");
   modalD.style.display = "flex";
 
-  const response = await fetch(`http://localhost:3000/patients/${id}`) // Faz a requisição para o arquivo db.json
+  const response = await fetch(api+ `/patients/${id}`) // Faz a requisição para o arquivo db.json
   const data = await response.json() // Transforma a resposta em um objeto json
 
   document.getElementById("idD").value = id
