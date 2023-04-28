@@ -37,6 +37,8 @@ async function requestValue() {
 
     console.log(valueTotal + "teste funcão leitura")
     await insertInApi(valueTotal)
+
+    closeModalC()
 }
 
 async function requestValueUpdate() {
@@ -97,6 +99,8 @@ async function insertInApi(firstPosition) {
 
 //Criar função assincrona para editar os dados na API
 async function updateApi(firstPosition, editId) {
+    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
+
     console.log(editId)
     return fetch(api+ `/patients/${editId}`, {
         method: 'PUT',
@@ -120,7 +124,7 @@ async function listPatients() {
 console.log(listPatients() + "teste get")
 
 //Chama a url do db.json com os dados
-async function carregarPaciente() {
+async function loadPatient() {
     const formData = await listPatients('../assets/api/db.json')
     console.log(formData + "test data")
 
@@ -146,12 +150,15 @@ async function carregarPaciente() {
   `;
         table.appendChild(row)
     });
+    
 }
-window.addEventListener('DOMContentLoaded', carregarPaciente)
+window.addEventListener('DOMContentLoaded', loadPatient)
 
 
 async function deleteLine(deleteId) {
-        return fetch(`http://localhost:3000/patients/${deleteId}`, {
+    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
+
+        return fetch(api+`/patients/${deleteId}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -159,4 +166,5 @@ async function deleteLine(deleteId) {
             },
            
         })
+        location.reload();
     }

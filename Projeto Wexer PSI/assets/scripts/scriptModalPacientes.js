@@ -154,15 +154,17 @@ document.addEventListener("click", outSideClickD)
 function patientCreate() {
   const modalS = document.getElementById("modalSuccess");
   modalS.style.display = "flex";
+
+  window.setTimeout(() => {
+     closeModalS()
+  }, 3000)
 }
 
 function closeModalS() {
   const modalS = document.getElementById("modalSuccess");
 
-  // window.setTimeout(() => {
-  //   modalS.style.display = "none";
-
-  // }, 1000)
+  modalS.style.display = "none";
+ 
 }
 
 
