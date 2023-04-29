@@ -117,6 +117,10 @@ form input {
     padding-left: .3rem;
 }
 
+#modalData form input{
+    background: #E0E0E0;
+}
+
 form select {
     width: 18rem;
     height: 2.2rem;
