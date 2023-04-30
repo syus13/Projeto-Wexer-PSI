@@ -13,7 +13,7 @@ function changeBoxes() {
   }
 }
 
-// Função para pegar os dados digitados e salvar no db.json
+// Função para pegar os dados digitados e salvar no banco
 async function registerUser() {
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value;

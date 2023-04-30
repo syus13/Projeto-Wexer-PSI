@@ -3,7 +3,7 @@ const btnSave = document.querySelector("#createPatient")
 
 /* const btnUpdate = document.querySelector("editPatient")
  */
-//referenciar ou id de cada input
+//referenciar o id de cada input
 async function requestValue() {
     const cpf = document.querySelector("#cpf")
     const name = document.querySelector("#name")
@@ -39,6 +39,8 @@ async function requestValue() {
     await insertInApi(valueTotal)
 
     closeModalC()
+    loadPatient()
+    
 }
 
 async function requestValueUpdate() {
@@ -114,46 +116,57 @@ async function updateApi(firstPosition, editId) {
 
 
 // Função GET
-async function listPatients() {
-    const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
-
-    const response = await fetch(api+ '/patients') // Faz a requisição para o arquivo db.json
-    const data = await response.json() // Transforma a resposta em um objeto json
-    return data; // Retorna os dados obtidos
-}
-console.log(listPatients() + "teste get")
-
-//Chama a url do db.json com os dados
-async function loadPatient() {
-    const formData = await listPatients('../assets/api/db.json')
-    console.log(formData + "test data")
-
+async function listPatients(name) {
+    const api = 'https://bancodedadosprojeto.onrender.com'
   
-    //Criar a tabela dentro do body com os dados capturados
+    const response = await fetch(api + '/patients')
+    const data = await response.json()
+  
+    if (name) {
+      return data.filter(patient => patient.name.toLowerCase().includes(name.toLowerCase()))
+    }
+  
+    return data;
+  }
+  
+  async function loadPatient() {
+    const searchInput = document.querySelector('#inputFilter')
+    let filteredData = await listPatients()
+  
+    searchInput.addEventListener('keyup', async () => {
+      filteredData = await listPatients(searchInput.value)
+      renderTable(filteredData)
+    })
+  
+    renderTable(filteredData)
+  }
+  
+  function renderTable(data) {
     const table = document.querySelector('#tablePatient')
-    formData.forEach(data => {
-        const row = document.createElement('tr')
-        row.innerHTML = `
-    <td onclick = "openModalData(${data.id})">${data.id}</td>
-    <td onclick = "openModalData(${data.id})">${data.name}</td>
-    <td onclick = "openModalData(${data.id})">${data.cpf}</td>
-    <td>
-    <div id="icons">
-    <a href="prontuario.html"> <button id="openModalMedicalRecord"><i class="fa-solid fa-clipboard-list"></i>
-     </button></a>
-     <button onclick="openModalE(${data.id})" class="openModalEdit" id="openModalEdit"><i class="fa-solid fa-pen"></i>
-     </button>
-     <button onclick="deleteLine(${data.id})" id="btnDelete"><i class="fa-solid fa-trash-can"></i>
-     </button>
- </div>
-    </td>
-  `;
-        table.appendChild(row)
+    table.innerHTML = ''
+  
+    data.forEach(patient => {
+      const row = document.createElement('tr')
+      row.innerHTML = `
+        <td onclick="openModalData(${patient.id})">${patient.id}</td>
+        <td onclick="openModalData(${patient.id})">${patient.name}</td>
+        <td onclick="openModalData(${patient.id})">${patient.cpf}</td>
+        <td>
+          <div id="icons">
+            <a href="prontuario.html">
+              <button id="openModalMedicalRecord"><i class="fa-solid fa-clipboard-list"></i></button>
+            </a>
+            <button onclick="openModalE(${patient.id})" class="openModalEdit" id="openModalEdit"><i class="fa-solid fa-pen"></i></button>
+            <button onclick="deleteLine(${patient.id})" id="btnDelete"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </td>
+      `;
+      table.appendChild(row)
     });
-    
-}
-window.addEventListener('DOMContentLoaded', loadPatient)
-
+  }
+  
+  window.addEventListener('DOMContentLoaded', loadPatient)
+  
 
 async function deleteLine(deleteId) {
     const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
@@ -166,5 +179,7 @@ async function deleteLine(deleteId) {
             },
            
         })
-        location.reload();
+        
     }
+
+    
