@@ -185,6 +185,3 @@ async function deleteLine(deleteId) {
       loadPatient()
   })
 }
-    
-
-    

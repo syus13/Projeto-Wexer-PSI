@@ -228,7 +228,12 @@
 
                     <section class="field">
                         <label for="nationality">Nacionalidade:</label><br>
-                        <input type="text" placeholder="digite" id="nationalityE" name="nationality" class="inputnationality" />
+                        <select  id="nationalityE" name="nationality" class="inputnationality">
+                            <option value="" hidden></option>
+                            <option value="Brasileiro">Brasileiro</option>
+                            <option value="Argentino">Argentino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
                     </section>
 
                     <section class="field">
@@ -250,9 +255,14 @@
                     </section>
 
                     <section class="field">
-                        <label for="maritalStatus">Estado Civil</label><br>
-                        <input type="text" placeholder="digite" id="maritalStatusE" name="maritalStatus"
-                            class="inputmaritalStatus" />
+                        <label for="maritalStatus">Estado civil:</label><br>
+                        <select  id="maritalStatusE" name="maritalStatus" class="inputmaritalStatus">
+                            <option value="" hidden></option>
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Divorciado(a)">Divorciado(a)</option>
+                            <option value="Viúvo(a)">Viúvo(a)</option>
+                        </select>
                     </section>
 
                     <section class="field">
