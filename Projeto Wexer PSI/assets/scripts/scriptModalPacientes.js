@@ -15,6 +15,7 @@ function outSideClickC(event) {
   const modalC = document.getElementById("modalInsert");
   if (event.target == modalC) {
     closeModalC()
+
   }
 }
 
@@ -156,7 +157,8 @@ function patientCreate() {
   modalS.style.display = "flex";
 
   window.setTimeout(() => {
-     closeModalS()
+    closeModalS()
+    document.location.reload();
   }, 3000)
 }
 

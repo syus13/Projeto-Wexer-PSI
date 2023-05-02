@@ -35,7 +35,6 @@ async function requestValue() {
         dad: dad.value,
     }
 
-    console.log(valueTotal + "teste funcão leitura")
     await insertInApi(valueTotal)
 
     closeModalC()
@@ -78,7 +77,11 @@ async function requestValueUpdate() {
     console.log(valueTotal + "teste funcão update")
     await updateApi(valueTotal, editId.value)
     
-    closeModalE()
+    window.setTimeout(() => {
+      document.location.reload();
+      closeModalE()
+    }, )
+    
 }
 
 // colocar observador no botão
@@ -130,11 +133,11 @@ async function listPatients(name) {
   }
   
   async function loadPatient() {
-    const searchInput = document.querySelector('#inputFilter')
+    const inputFilter = document.querySelector('#inputFilter')
     let filteredData = await listPatients()
   
-    searchInput.addEventListener('keyup', async () => {
-      filteredData = await listPatients(searchInput.value)
+    inputFilter.addEventListener('keyup', async () => {
+      filteredData = await listPatients(inputFilter.value)
       renderTable(filteredData)
     })
   
@@ -165,21 +168,23 @@ async function listPatients(name) {
     });
   }
   
-  window.addEventListener('DOMContentLoaded', loadPatient)
   
+  window.addEventListener('DOMContentLoaded', loadPatient)
 
 async function deleteLine(deleteId) {
     const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
 
-        return fetch(api+`/patients/${deleteId}`, {
-            method: 'DELETE',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-           
-        })
-        
-    }
+    return await fetch(api+`/patients/${deleteId}`, {
+      method: 'DELETE',
+      headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+      },           
+  })
+  .then(() => {
+      loadPatient()
+  })
+}
+    
 
     
