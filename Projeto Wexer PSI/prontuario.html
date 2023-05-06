@@ -58,8 +58,8 @@
                     <div class="titlePatient">
                         <i class="fa-regular fa-user"></i> Paciente
                     </div>
-                    <div class="name">
-                        Biricutico
+                    <div class="name" id="nameP">
+
                     </div>
                 </section>
 
@@ -67,8 +67,8 @@
                     <div class="titlePatient">
                         <i class="fa-regular fa-calendar"></i>Nascimento
                     </div>
-                    <div class="data">
-                        30/03/1981
+                    <div class="data" id="dataP">
+
                     </div>
                 </section>
 
@@ -76,8 +76,8 @@
                     <div class="titlePatient">
                         <i class="fa-solid fa-briefcase"></i>Profissão
                     </div>
-                    <div class="profession">
-                        Analista de TI
+                    <div class="profession" id="professionP">
+
                     </div>
                 </section>
 
@@ -85,8 +85,8 @@
                     <div class="titlePatient">
                         <i class="fa-solid fa-book"></i>Escolaridade
                     </div>
-                    <div class="scholarity">
-                        Superior Completo
+                    <div class="scholarity" id="scholarityP">
+
                     </div>
                 </section>
 
@@ -96,8 +96,8 @@
 
             <div id="containerRight">
 
-                <div id="boxSection">
-                    <div id="sections" class="alignComponents">
+                <div id="boxSession">
+                    <div id="sessions" class="alignComponents">
                         <img src="assets/imagens/prontuario/head.svg" />
                         Sessão
                     </div>
@@ -115,21 +115,21 @@
                             Filtrar por:
                         </div>
 
-                        <div>                        
-                                <select id="filterOptions" name="filterOptions">
-                                    <option value="all">Todos</option>
-                                    <option value="onlySection">Sessão</option>
-                                    <option value="onlyRelevantFact">Fato Relevante</option>
-                                </select>                           
+                        <div>
+                            <select id="filterOptions" name="filterOptions">
+                                <option value="all">Todos</option>
+                                <option value="onlySession">Sessão</option>
+                                <option value="onlyRelevantFact">Fato Relevante</option>
+                            </select>
                         </div>
-                        
+
                     </div>
                 </div>
 
-                <div id="cardSections">
+                <div id="cardSessions">
 
                     <div id="imgsection">
-                        <button id="btnSection">
+                        <button id="btnSessions">
                             <img src="assets/imagens/prontuario/headW.svg" />
                         </button>
                         <div id="titleInfo">
@@ -182,11 +182,90 @@
 
     </div>
 
+    <div id="modalNewSession">
+
+        <div id="modal" class="modal">
+
+            <div id="conteinerSession">
+
+
+                <div id="headModal">
+                    <div id="headTextModal">
+                        Nova Sessão
+                    </div>
+                    <div class="close">
+                        <i onclick="closeNewSession() " class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                <div id="formOne">
+                    <form>
+
+                        <section class="field">
+                            <label for="date">Data*</label><br>
+                            <input type="date" id="date" name="date" class="inputDate" />
+                        </section>
+
+                        <section class="field">
+                            <label for="initTime">Hora de início*</label><br>
+                            <input type="time" placeholder="12:00" id="initTime" name="initTime"
+                                class="inputInitTime" />
+                        </section>
+
+                        <section class="field">
+                            <label for="endTime">Hora de fim*</label><br>
+                            <input type="time" placeholder="12:00" id="endTime" name="endTime" class="inputEndTime" />
+                        </section>
+
+                    </form>
+                </div>
+
+                <form>
+                    <div class="field">
+                        <label for="titleSession">Título*</label><br>
+                        <input type="text" placeholder="Digite" id="titleSession" name="titleSession"
+                            class="inputTitleSession" />
+                    </div>
+                </form>
+
+                <form>
+                    <div class="field">
+                        <label for="sessionSummary">Resumo da sessão*</label><br>
+                        <input type="text" placeholder="Texto" id="sessionSummary" name="sessionSummary"
+                            class="inputSessionSummary" />
+                    </div>
+                </form>
+
+            </div>
+
+
+
+            <div id>
+                <div id="boxFooter">
+                    <span id="textFooter">
+                        *Campos obrigatórios
+                    </span>
+                    <div id="createSession">
+                        <a href="pacientes.html" id="cancel"> Cancelar</a>
+                        <button onclick="patientCreate()" type="button" id="btnCreateSession">Criar</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
+    </div>
+
+
+
+
 
 
 </body>
 <script src="assets/scripts/scriptModalProntuario.js"></script>
+<script src="assets/scripts/scriptProntuario.js"></script>
+
 <script src="https://kit.fontawesome.com/8a66317056.js" crossorigin="anonymous"></script>
 
 </html>

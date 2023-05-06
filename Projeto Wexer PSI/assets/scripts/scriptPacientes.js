@@ -1,9 +1,8 @@
-//Pegar os dados para enviar para API
+//Pegar os dados do botão criar paciente para enviar para API
 const btnSave = document.querySelector("#createPatient")
 
-/* const btnUpdate = document.querySelector("editPatient")
- */
-//referenciar o id de cada input
+
+//Função para pegar os valores digitados no formulário através dos id' de cada input.
 async function requestValue() {
     const cpf = document.querySelector("#cpf")
     const name = document.querySelector("#name")
@@ -18,7 +17,7 @@ async function requestValue() {
     const mom = document.querySelector("#mom")
     const dad = document.querySelector("#dad")
 
-    //Objeto para pegar os valores dos inputs
+    //Objeto utilizado para guardar os valores dos inputs
     const valueTotal = {
         id: "",
         cpf: cpf.value,
@@ -35,7 +34,7 @@ async function requestValue() {
         dad: dad.value,
     }
 
-    await insertInApi(valueTotal)
+    await insertInApi(valueTotal) 
 
     closeModalC()
     loadPatient()
@@ -74,8 +73,7 @@ async function requestValueUpdate() {
         dad: dad.value,
     }
 
-    console.log(valueTotal + "teste funcão update")
-    await updateApi(valueTotal, editId.value)
+        await updateApi(valueTotal, editId.value)
     
     window.setTimeout(() => {
       document.location.reload();
@@ -126,7 +124,7 @@ async function listPatients(name) {
     const data = await response.json()
   
     if (name) {
-      return data.filter(patient => patient.name.toLowerCase().includes(name.toLowerCase()))
+      return data.filter(patient => patient.name.toLowerCase().includes(name.toLowerCase())) //
     }
   
     return data;
@@ -184,4 +182,5 @@ async function deleteLine(deleteId) {
   .then(() => {
       loadPatient()
   })
+
 }
