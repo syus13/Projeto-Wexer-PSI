@@ -20,7 +20,7 @@ header {
     gap: 3rem;
 }
 
-a {
+a, #returnPage {
     text-decoration: none;
     font-family: 'Comfortaa';
     font-style: normal;
@@ -41,7 +41,7 @@ a {
 
 .welcome span {
     font-family: 'Montserrat';
-    font-style: normal;
+   font-size: 1rem;
     font-weight: 300;
     font-size: 1rem;
     line-height: 29px;
@@ -51,6 +51,7 @@ a {
 
 .container {
     padding: 20px 100px;
+
 }
 
 .patientList {
@@ -161,6 +162,8 @@ i {
 }
 
 #containerRight {
+    display: flex;
+    flex-direction: column;
     width: 70%;
     padding-left: 2rem;
 }
@@ -319,5 +322,16 @@ p {
     color: #424242;
     font-weight: bold;
     margin-top: 15px;
+}
 
+ #returnTop {
+    margin-top: 2rem;
+    margin-left: 31rem;   
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 170%;
+    color: #212121;
 }
