@@ -36,11 +36,11 @@ async function registerUser() {
 
     const response = await fetch(api + '/register', requestOptions);
 
-    if (!response.ok) { // se a senha for ok exibe mensagem de erro
+    if (!response.ok) { // se a senha estiver correta exibe mensagem de erro
       const error = await response.text();
       alert(`Ocorreu um erro: ${error}`);
     } else {// senão cadastra o usuário normalmente
-      // alert('Usuário cadastrado com sucesso!');
+       alert('Usuário cadastrado com sucesso!');
       
       window.location.replace("index.html");
     }

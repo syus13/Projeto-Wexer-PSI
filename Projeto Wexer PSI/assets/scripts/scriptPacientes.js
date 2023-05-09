@@ -86,7 +86,7 @@ async function requestValueUpdate() {
 
 btnSave.addEventListener('click', requestValue)
  
-//Criar função assincrona para gravar os dados na API
+//Criar função  para gravar os dados na API
 async function insertInApi(firstPosition) {
     const api = 'https://bancodedadosprojeto.onrender.com' // constante com a URL do db.json na render
 
