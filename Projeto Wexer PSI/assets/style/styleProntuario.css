@@ -36,8 +36,63 @@ a, #returnPage {
 }
 
 .welcome {
-    margin-right: 20px;
+    display: flex;
+    margin-right: 1.25rem;
+    padding-right: 2rem;
+
 }
+
+#textHeader {
+    font-family: 'Montserrat';    
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #017849;
+    margin-right: .30rem;
+}
+
+.textUser {
+    font-family: 'Montserrat';   
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #017849;
+    margin-right: .30rem;
+}
+
+.dropContainer a{
+    text-decoration: none;
+    font-family: 'Montserrat';    
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #017849;
+    margin-right: .30rem;
+}
+
+.dropContainer a:hover{
+    background-color: #2F80ED;
+}
+
+.dropContainer{
+    font-family: 'Montserrat';    
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #017849;
+    margin-right: .30rem;
+}
+
+.dropdownEnd{
+    position: absolute;
+    /* box-shadow: 0 0 2px black; */
+    display: none;
+}
+
+.userDd:hover .dropdownEnd{
+    display: block;
+}
+
 
 .welcome span {
     font-family: 'Montserrat';
